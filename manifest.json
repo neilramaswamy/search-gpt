@@ -1,0 +1,31 @@
+{
+    "name": "OpenAI Search",
+    "description": "A Chrome extension that sets your default search to ChatGPT",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "minimum_chrome_version": "102.0",
+    "omnibox": {
+        "keyword": "gpt"
+    },
+    "chrome_settings_overrides": {
+        "search_provider": {
+            "encoding": "UTF-8",
+            "is_default": true,
+            "keyword": "chat.openai.com",
+            "favicon_url": "https://openai.com/favicon.ico",
+            "name": "ChatGPT",
+            "search_url": "https://chat.openai.com/chat?q={searchTerms}",
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://chat.openai.com/*"
+            ],
+            "js": [
+                "search.js"
+            ]
+        }
+    ],
+    "permissions": []
+}
