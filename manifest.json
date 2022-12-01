@@ -14,7 +14,7 @@
             "keyword": "chat.openai.com",
             "favicon_url": "https://openai.com/favicon.ico",
             "name": "ChatGPT",
-            "search_url": "https://chat.openai.com/chat?q={searchTerms}",
+            "search_url": "https://chat.openai.com/chat?q={searchTerms}"
         }
     },
     "content_scripts": [
